@@ -1,0 +1,83 @@
+baseURL: "https://lghupan.github.io/"
+title: "Pan Hu's Random Thoughts"
+paginate: 10
+theme: PaperMod
+languageCode: en-us
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Pan Hu's Random Thoughts"
+  description: "Technical posts, personal writing, and notes by Pan Hu."
+  author: Pan Hu
+
+  defaultTheme: auto  # light, dark, or auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+
+  homeInfoParams:
+    Title: "Hi, I'm Pan Hu"
+    Content: >
+      Technical posts, personal writing, and notes.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/lghupan"
+
+  # Giscus comments — fill in repoId and categoryId from https://giscus.app
+  giscus:
+    repo: "lghupan/lghupan.github.io"
+    repoId: "MDEwOlJlcG9zaXRvcnkxNDU0ODA4NDg="
+    category: "Announcements"
+    categoryId: "DIC_kwDOCKvckM4C3ZZu"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "en"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+
+taxonomies:
+  tag: tags
+  category: categories
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON  # required for search
